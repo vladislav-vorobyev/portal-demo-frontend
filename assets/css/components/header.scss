@@ -1,0 +1,123 @@
+@import '../theme.scss';
+
+.header {
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+
+  background-color: $background-color;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid $border-color;
+
+  img.logotype {
+    position: relative;
+    top: 6px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    column-gap: 25px;
+
+    &__search {
+      display: flex;
+      height: 36px;
+
+      border: 1px solid $border-color;
+      border-radius: 26px;
+
+      .search__input {
+        width: 270px;
+
+        padding: 5px 10px;
+
+        background: $background-color;
+        border: none;
+        border-left: 0 solid $border-color;
+        border-radius: 26px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .search__icon {
+        width: 40px;
+
+        cursor: pointer;
+        text-indent: -999px;
+
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.-search {
+          border-right: 0 solid $border-color;
+          border-radius: 26px;
+
+          background: $background-color url(~/assets/images/icons/header-search.svg) no-repeat center;
+        }
+      }
+    }
+
+    &__notification {
+      height: 38px;
+
+      .notification__icon {
+        width: 40px;
+        height: inherit;
+
+        cursor: pointer;
+        border: none;
+        border-radius: 26px;
+
+        &.-notification {
+          background: $selected-color url(~/assets/images/icons/header-notification.svg) no-repeat center;
+        }
+      }
+    }
+
+    &__settings {
+      height: 38px;
+
+      .settings__icon {
+        width: 40px;
+        height: inherit;
+
+        cursor: pointer;
+        border: none;
+        border-radius: 26px;
+
+        &.-settings {
+          background: $selected-color url(~/assets/images/icons/header-settings.svg) no-repeat center;
+        }
+      }
+    }
+
+    &__side-menu {
+      width: 40px;
+      height: 38px;
+
+      .el-dropdown-menu__item:not(.is-disable):hover {
+        color: $secondary-color;
+        background-color: $selected-color;
+      }
+    }
+  }
+}
+
+.ava-display-name {
+  line-height: 20px;
+  padding: 0 20px;
+  margin: 0 0 6px;
+  font-size: small;
+  font-style: italic;
+}

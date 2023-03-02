@@ -1,0 +1,359 @@
+@import './theme.scss';
+
+.antares {
+  min-width: 520px;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  color: $secondary-color;
+  line-height: 1.5;
+
+  background-color: $background-color-body;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: $text-color-dark;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+* {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+    border-radius: 6px;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 200px auto;
+  height: calc(100vh - 71px);
+
+  > div:nth-child(2) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    width: calc(100% - 1px);
+    height: calc(100vh - 72px);
+    overflow: auto;
+
+    .container {
+      padding: 30px 60px 30px 30px;
+    }
+  }
+}
+
+.btn {
+  font-size: 1rem;
+  border: 1px solid $primary-color;
+  background-color: white;
+  color: $primary-color;
+  border-radius: 0.25rem;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+.btn:hover,
+.btn:after {
+  background-color: $primary-color;
+  color: white;
+}
+
+h1.page-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  margin: 0 0 30px 0;
+}
+
+/**
+ * Element UI overrides
+ */
+
+.el-transfer-panel {
+  border-color: $line-color;
+
+  .el-transfer-panel__header {
+    background-color: #faf9f8;
+    border-bottom-color: $line-color;
+  }
+}
+
+.el-link.el-link--default:hover {
+  color: $primary-color;
+}
+
+.el-link.is-underline:hover:after {
+  border-color: $primary-color;
+}
+
+.el-pagination {
+  .el-pager li.number {
+    color: $text-color-grey;
+  }
+
+  &.is-background {
+    .btn-next:hover,
+    .btn-prev:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.el-pagination button:hover,
+.el-pager li:hover,
+.el-pager li.active {
+  color: $primary-color;
+}
+
+.el-pagination__sizes .el-input .el-input__inner:hover {
+  border-color: $primary-color;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: $primary-color;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: $primary-color;
+  color: white;
+  border-radius: 20px;
+}
+
+.el-tabs__item {
+  color: $nav-item-color;
+  font-weight: 600;
+}
+
+.el-tabs__item:hover {
+  color: $primary-color;
+}
+
+.el-tabs__item.is-active {
+  color: $nav-active-item-color;
+  background-color: #fff;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.02);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.el-dialog__headerbtn:focus .el-dialog__close,
+.el-dialog__headerbtn:hover .el-dialog__close {
+  color: $primary-color;
+}
+
+.el-message-box__headerbtn:focus .el-message-box__close,
+.el-message-box__headerbtn:hover .el-message-box__close {
+  color: $primary-color;
+}
+
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: $primary-color;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: $primary-color;
+}
+
+.el-select .el-input__inner:focus {
+  border-color: $primary-color;
+}
+
+.el-select-dropdown__item.selected {
+  color: $primary-color;
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: $primary-color;
+}
+
+.el-transfer-panel__item:hover {
+  color: $primary-color;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: $primary-color;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: $primary-color;
+}
+
+.el-checkbox__inner:hover {
+  border-color: $primary-color;
+}
+
+.el-form-item__label {
+  color: $text-color-grey;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.el-button {
+  font-size: 1rem;
+  border: 1px solid $primary-color;
+  background-color: white;
+  color: $primary-color;
+  border-radius: 5px;
+  padding: 7px 20px;
+  height: 36px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  margin: 0 auto;
+}
+
+.el-button:focus,
+.el-button:hover,
+.el-button.is-plain:focus,
+.el-button.is-plain:hover {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: white;
+}
+
+.el-button.is-circle {
+  border-color: $icon-button-background-color;
+  background-color: $icon-button-background-color;
+  color: $icon-button-color;
+  border-radius: 50%;
+  padding: 7px;
+  height: 36px;
+  width: 36px;
+}
+
+.el-button.is-circle:focus,
+.el-button.is-circle:hover {
+  border-color: white;
+  background-color: white;
+  color: $primary-color;
+}
+
+.el-button--primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: white;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+  background-color: $primary-focus-color;
+}
+
+.el-button--primary.is-disabled,
+.el-button--primary.is-disabled:active,
+.el-button--primary.is-disabled:focus,
+.el-button--primary.is-disabled:hover {
+  background-color: $primary-disabled-color;
+  border-color: $primary-disabled-color;
+}
+
+.el-popconfirm__action {
+  margin-top: 7px;
+}
+
+.el-dialog {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.el-message-box {
+  padding: 10px 10px 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.v-modal {
+  opacity: 0.3;
+}
+
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  color: $primary-color;
+  background-color: $selected-color;
+}
+
+.el-dialog {
+  &__header {
+    padding: 30px 40px 10px;
+  }
+
+  &__headerbtn {
+    top: 30px;
+    right: 30px;
+  }
+
+  &__footer {
+    padding: 10px 40px 30px;
+  }
+
+  &__body {
+    padding: 30px 40px;
+  }
+}
+
+.el-row {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.el-form-item {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    line-height: 16px;
+    padding-left: 4px;
+    padding-bottom: 5px;
+  }
+}
+
+/* End of Element UI */
+
+@media screen and (min-width: 1024px) {
+  .container {
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container:not(.is-max-desktop) {
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+  }
+}

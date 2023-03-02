@@ -1,0 +1,45 @@
+.profile {
+  &.container {
+    padding: 60px 200px 40px 40px;
+  }
+
+  .main-box {
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 900px;
+    background: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .tab-title {
+    padding: 35px;
+    text-align: center;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  }
+
+  .tab-content {
+    padding: 40px 80px;
+  }
+
+  .tab-footer {
+    margin-top: 35px;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .profile {
+    &.container {
+      padding: 60px 40px 40px 40px;
+    }
+  }
+}

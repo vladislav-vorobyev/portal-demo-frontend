@@ -1,0 +1,43 @@
+$primary-color: #ff7416;
+$primary-focus-color: #ff6600;
+$primary-disabled-color: #ffe0d0;
+$secondary-color: #282830;
+$header-color-dark: #282830;
+$background-color: #ffffff;
+$background-color-body: #f4f4f4;
+$scrollbar-color: #c9cacd;
+$text-color-dark: #282830;
+$text-color-grey: #8f94a4;
+$text-color-light: #FFFFFF;
+$light-breaklines-color: #dddddd;
+$border-color: #F5F6FA;
+$selected-color: #F5F6FA;
+$line-color: #E4E6EE;
+$icon-button-color: #535662;
+$icon-button-background-color: #F5F6FA;
+$nav-item-color: #535662;
+$nav-active-item-color: #282830;
+
+$card-color-red: #fd4d5c;
+$card-color-green: #4ecb71;
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(~assets/fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(~assets/fonts/OpenSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(~assets/fonts/OpenSans-Bold.ttf) format('truetype');
+}

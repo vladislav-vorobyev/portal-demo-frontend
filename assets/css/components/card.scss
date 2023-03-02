@@ -1,0 +1,142 @@
+@import '../theme.scss';
+
+.card {
+  &-wrapper {
+    padding: 30px 30px;
+
+    width: 571px;
+    height: 191px;
+
+    background: $background-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+
+    &--narrow {
+      display: flex;
+      padding: 0;
+
+      width: 631px;
+      height: 40px;
+
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+      border-radius: 5px;
+
+      cursor: pointer;
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+
+      cursor: pointer;
+
+      p::first-letter {
+        color: $primary-color;
+      }
+    }
+
+    &__options {
+      display: flex;
+      justify-content: flex-end;
+
+      cursor: pointer;
+
+      &:after {
+        content: '\2807';
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    height: calc(100% - 30px);
+
+    &__left-side {
+      &__top {
+        grid-column-start: 1;
+        grid-row-start: 1;
+
+        display: flex;
+      }
+
+      &__bottom {
+        grid-column-start: 1;
+        grid-row-start: 2;
+
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+
+    .notification-text {
+      padding: 17px 10px;
+
+      .row {
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .status {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        color: $text-color-grey;
+      }
+    }
+
+    .notification-number {
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 87px;
+    }
+
+    &__content {
+      grid-column-start: 2;
+      grid-row-start: 2;
+
+      display: grid;
+      grid-auto-rows: min-content;
+      align-content: flex-end;
+
+      padding-bottom: 12px;
+
+      font-weight: 400;
+
+      &.-empty {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      &__title {
+        font-weight: 700;
+      }
+    }
+
+    .s-red {
+      color: $card-color-red;
+    }
+
+    .s-green {
+      color: $card-color-green;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '../theme.scss';
+
+.footer-row {
+  display: flex;
+  border-top: 1px solid $primary-color;
+  background-color: #ffffff;
+  color: #333333;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 27px;
+  text-decoration: none solid rgb(51, 51, 51);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+  padding: 60px 0 60px 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5%;
+  flex-grow: 1;
+  margin: 0 5rem 0 5rem;
+}
+
+.desktop-footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  text-decoration: none solid rgb(51, 51, 51);
+  flex: 1 1 33%;
+  flex-direction: column;
+  display: flex;
+}
+
+.logo {
+  display: block;
+  width: 103px;
+  height: 34px;
+}
+
+.sub-header {
+  font-size: 16px;
+  color: #282830;
+  font-weight: 600;
+}
+
+.no-underline {
+  text-decoration: none solid rgb(51, 51, 51);
+  color: #333333;
+}
+
+.phone-number {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 29px;
+  text-decoration: none solid rgb(51, 51, 51);
+}
+
+.footer-container-policy {
+  display: inline-flex;
+  list-style: none;
+  vertical-align: middle;
+  gap: 5rem;
+}

@@ -1,0 +1,246 @@
+@import '../theme.scss';
+
+$um-content-header-height: 360px;
+
+.um {
+  .container {
+    height: calc(100% - 30px);
+    padding-bottom: 0 !important;
+  }
+
+  .entities-list-box {
+    &.extended-search {
+      .el-table {
+        max-height: calc(100vh - $um-content-header-height - 40px);
+      }
+    }
+
+    .el-table {
+      max-height: calc(100vh - $um-content-header-height);
+      overflow: auto;
+
+      &__header-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+    }
+  }
+
+  .total-count {
+    color: $text-color-grey;
+    vertical-align: middle;
+  }
+
+  .entities-list {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .clickable-row {
+    td:not(.actions) {
+      cursor: pointer;
+    }
+  }
+
+  .el-input.is-disabled.info-field .el-input__inner,
+  .view-info .el-input.is-disabled .el-input__inner {
+    color: $text-color-dark;
+    cursor: default;
+  }
+
+  .el-dialog {
+    &__header {
+      padding: 30px 40px 10px;
+    }
+
+    &__headerbtn {
+      top: 30px;
+      right: 30px;
+    }
+
+    &__footer {
+      padding: 10px 40px 30px;
+    }
+
+    &__body {
+      padding: 30px 40px;
+    }
+  }
+
+  .view-dialog {
+    .el-dialog__body {
+      padding-bottom: 40px;
+    }
+  }
+
+  .dic-page-wrap {
+    max-width: 1000px;
+
+    .entity-dialog {
+      .el-dialog {
+        max-width: 600px;
+      }
+    }
+  }
+
+  .avatar-wrap {
+    .el-form-item__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .avatar-uploader {
+      .el-link {
+        color: $primary-color;
+        font-size: small;
+      }
+    }
+
+    .el-avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.avatar-140 .el-avatar {
+      width: 140px;
+      height: 140px;
+
+      i.el-icon-user-solid {
+        font-size: 80px;
+        height: 95px;
+      }
+    }
+
+    &.avatar-40 .el-avatar {
+      width: 40px;
+      height: 40px;
+
+      i.el-icon-user-solid {
+        font-size: 30px;
+        height: 35px;
+      }
+    }
+  }
+
+  .user-wrap {
+    .is-disabled {
+      .el-upload {
+        cursor: default;
+      }
+
+      .avatar-uploader {
+        .el-link {
+          color: $text-color-grey;
+        }
+      }
+    }
+  }
+
+  .user-list-wrap {
+    max-width: 1600px;
+
+    .entity-dialog {
+      .el-dialog {
+        min-width: 700px;
+        max-width: 900px;
+      }
+    }
+
+    .roles-dialog {
+      .el-dialog {
+        min-width: 700px;
+        max-width: 850px;
+      }
+
+      .el-transfer-panel {
+        width: 35%;
+        min-width: 200px;
+      }
+    }
+
+    .list-entity-actions {
+      display: inline-block;
+    }
+
+    .el-transfer__buttons {
+      width: 120px;
+    }
+
+    .user-roles-t .el-transfer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .list-actions-col {
+    width: 120px;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .el-form-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      line-height: 16px;
+      padding-left: 4px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .el-select.full-line-select {
+    width: 100%;
+  }
+
+  .extended-search-wrap {
+    .el-select {
+      width: 31%;
+    }
+  }
+
+  .el-tab-pane {
+    .um-list-wrap {
+      transition: all 600ms;
+      opacity: 0;
+    }
+
+    &.active .um-list-wrap {
+      opacity: 1;
+    }
+  }
+}
+
+.um-form-dropdown-items {
+  .el-dropdown-link {
+    cursor: pointer;
+  }
+
+  .el-icon--right {
+    margin: 8px;
+  }
+
+  .el-input-group__prepend {
+    padding: 0 2px;
+  }
+}
+
+.um-form-dropdown-items-pane {
+  width: 400px;
+  padding: 10px 20px;
+
+  .el-form-item {
+    margin-bottom: 10px;
+  }
+}
